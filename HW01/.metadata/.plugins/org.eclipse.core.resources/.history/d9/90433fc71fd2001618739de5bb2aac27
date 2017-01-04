@@ -1,0 +1,28 @@
+import java.util.Scanner;
+public class HW01 {
+
+	public static void main(String[] args) {
+		        Scanner a = new Scanner(System.in);
+
+		        double weight, height, bmi;
+		    
+
+		        System.out.print("Enter your weight in pounds: ");
+		        weight = a.nextInt();
+
+		        System.out.print("Enter your height: ");
+		        height = a.nextInt();
+
+		        bmi = ((weight * 703)/(height * height));
+
+		        System.out.printf("Your BMI is %f", bmi);
+
+		        System.out.printf("\nBMI VALUES");
+		        System.out.printf("Underweight: less than 18.5");
+		        System.out.printf("Normal: between 18.5 and 24.9");
+		        System.out.printf("Overweight: between 25 and 29.9");
+		        System.out.printf("Obese: 30 or greater");
+		     }
+
+	}
+

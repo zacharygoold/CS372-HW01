@@ -1,0 +1,51 @@
+
+public class HW01 {
+
+	public static void main(String[] args) {
+		Date day = new Date(1,4,2017);
+		day.message();
+		System.out.printf("Month: "+day.getMonth());
+		System.out.println("Day: " + day.getDay());
+        System.out.println("Year: " + day.getYear());
+        day.setDay(4);
+        day.setMonth(1);
+        day.setYear(2017);
+        day.message();
+	}
+	
+	public class Date{
+			int month, day, year;
+			
+			public Date(int month, int day, int year){
+				this.month = month;
+				this.day = day;
+				this.year = year;
+			}
+			//GET FUNCTIONS
+			public int getMonth(){
+				return month;
+			}
+			public int getDay(){
+				return day;
+			}
+			public int getYear(){
+				return year;
+			}
+			//SET FUNCTIONS
+			public void setMonth(int month){
+				this.month = month;
+			}
+			public void setDay(int day){
+				this.day = day;
+			}
+			public void setYear(int year){
+				this.year = year;
+			}
+			//display message
+			public void message(){
+				System.out.printf(month+"/"+day+"/"+year);
+			}
+	}
+	
+	
+}

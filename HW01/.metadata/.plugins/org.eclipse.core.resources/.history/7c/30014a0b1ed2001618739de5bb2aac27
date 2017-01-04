@@ -1,0 +1,23 @@
+
+public class HW01 {
+
+	public static void main(String[] args) {
+		char A = 'A';
+		char B = 'B';
+		char C = 'C';
+		char a = 'a';
+		char b = 'b';
+		char c = 'c';
+		char d = '0';
+		char e = '1';
+		char f = '2';
+		char g = '$';
+		char h = '*';
+		char i = '+';
+		char j = '/';
+		char k = ' ';
+		System.out.printf("In this order A, B, C, a, b, c, 0, 1, 2, $, *, +, /, ' ' : \n" +(int)A+(int)B+(int)C);
+
+	}
+
+}

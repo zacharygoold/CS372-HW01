@@ -1,0 +1,52 @@
+import java.util.Scanner;
+
+public class HW01
+{
+    public static void main( String[] args )
+    {
+        Scanner input = new Scanner( System.in );
+        HW01 person1 = new HW01();
+
+        System.out.print( "Enter your first name: ");
+        person1.firstName = input.nextLine();
+
+
+        System.out.print( "Enter your age: ");
+        person1.age = input.nextInt();
+
+        System.out.printf( "Calculations for %s age %d\n", 
+            person1.getFirstName(), person1.getAge() );
+
+        System.out.printf( "Maximum Heart Rate: %d BPM (beats per minute)\n", person1.getMaxHeartRate() ); // Here, you haven't set the maxHeartRate yet, so it will be 0.
+
+        //System.out.print( "Target Heart Rate Range is: ");
+        //person1.displayTargetHeartRateRange();
+        //System.out.println();
+
+        input.close();
+    }
+
+    private int age, maxHeartRate;
+    private String firstName;
+
+    public void displayTargetHeartRateRange() {
+        // TODO Auto-generated method stub
+        // Well here you don't have anything to show because you haven't create the range of heart rate.
+        // You can create an array recording all the heart rate, and sort out the highest and the lowest heart rate.
+    }
+
+    public Object getMaxHeartRate() {
+        // TODO Auto-generated method stub
+        return maxHeartRate;
+    }
+
+    public Object getAge() {
+        // TODO Auto-generated method stub
+        return age;
+    }
+
+    public Object getFirstName() {
+        // TODO Auto-generated method stub
+        return firstName;
+    }
+}

@@ -1,0 +1,94 @@
+import java.io.*;
+import java.util.Scanner;// program uses class Scanner
+
+
+public class HW01
+{   
+    //        main method begins execution of Java application
+        public static void main( String args[] )
+        {
+        Scanner input = new Scanner(System.in );
+
+        Employee newEmployee = new Employee( 0.00 );
+
+        System.out.println( "Please enter Employee's firstname:" );
+        String first = input.nextLine();
+        newEmployee.setFirstName( first );
+        System.out.println();
+
+        System.out.println( "Please enter Employee's lastname:" );
+        String last = input.nextLine();
+        newEmployee.setLastName( last );
+        System.out.println();
+
+        System.out.println( "Please enter Employee'smonthly salary:" );
+        double monthly = input.nextDouble();
+        newEmployee.setMonthlySalary( monthly );
+        System.out.println();
+
+
+        newEmployee.displayMessage();
+
+    }
+
+}
+
+public class Employee
+{
+private String firstName;
+private String lastName;
+private double monthlySalary;
+
+public Employee (double monthly )
+{
+if ( monthly > 0.0 )
+    monthlySalary = monthly;
+
+if ( monthly< 0.00 )
+    monthlySalary = 0.0;
+
+} // end Salaryconstructor
+
+// method to set first name
+public void setFirstName( String first )
+{
+firstName = first;
+} // end method setFirstName
+
+// method to set last name
+public void setLastName( String last )
+{
+lastName = last;
+} // end method setLastName
+
+// method to setmonthly salary
+public void setMonthlySalary( double monthly )
+{
+monthlySalary = monthly;
+} // end method setLastName
+
+// method toretrieve first name
+public String getFirstName()
+{
+return firstName;
+} // end method getFirstName
+
+// method toretrieve last name
+public String getLastName()
+{
+return lastName;
+} // end method getFirstName
+
+// method toretrieve first name
+public double getMonthlySalary()
+{
+return monthlySalary;
+} // end method getMonthlySalary
+
+
+// method to display employee information to user
+public void displayMessage()
+{
+System.out.println(getFirstName()+" "+ getLastName()+" has a monthly salary of"+ getMonthlySalary());
+} // end method displayMessage
+} // end class Employee
